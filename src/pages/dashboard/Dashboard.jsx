@@ -82,7 +82,6 @@ const Dashboard = () => {
       );
 
       if (res.data.success) {
-        
         setTodos(res.data.allTodos);
       }
     } catch (err) {

@@ -117,7 +117,7 @@ const Dashboard = () => {
         <div className={classes.TodoItemContainer}>
           <h4 className={classes.itemListText}>Item List</h4>
           {todos.length === 0 && (
-            <p style={{ color: "red", fontWeight: "bold" }}>
+            <p style={{ color: "red", fontWeight: "bold", paddingLeft: '40px' }}>
               No todo, please add some todo
             </p>
           )}

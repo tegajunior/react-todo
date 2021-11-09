@@ -8,14 +8,15 @@ const TodoListBanner = () => {
       <div className={classes.root}>
         <span className={classes.comHeader}>TODO APP</span>
         <div className={classes.comText}>
-          hic optio perferendis corrupti. Totam animi officiis tempore repellat
-          autem ex minima! Aliquam excepturi neque, quaerat quia harum et!
-          Cumque officia tempore corrupti id culpa, vero debitis rem reiciendis
-          ducimus quas, necessitatibus aperiam ratione, voluptatum iusto
-          repellat. Quod perspiciatis iusto nobis ratione harum facere obcaecati
-          odio cupiditate. Quo, dolorem. Accusantium est maxime sunt aperiam
-          facere excepturi quaerat sed ducimus possimus ipsam alias corporis
-          minus aliquam, quos
+          What is a ToDo List? The definition is a simple one. It’s a list of
+          tasks you need to complete, or things that you want to do. <br />
+          <p>
+            Having a list of everything you need to do written down in one place
+            means you shouldn’t forget anything important. By prioritising the
+            tasks in the list you plan the order in which you’re going to do
+            them and can quickly see what needs your immediate attention and
+            what tasks you can leave until a little later.
+          </p>
         </div>
       </div>
     </div>

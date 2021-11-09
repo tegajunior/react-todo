@@ -1,0 +1,89 @@
+.root {
+  height: 100vh;
+  width: 300px;
+  background: #C7C7C7;
+  position: fixed;
+  left: 0;
+  top:0;
+  padding: 50px 22px;
+  z-index: 50
+}
+.hideSidebarIcon {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+}
+.hideSidebarIcon:hover {
+  color: #fff;
+}
+.avatarAndNameCon {
+  margin: 40px auto;
+  /* border: 1px solid #780978; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.shape {
+  background: #fff;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.shapeCircle {
+  border-radius: 50%;
+  border: 4px solid black;
+}
+.profileImage {
+  width: 100%;
+  object-fit: fill;
+  border-radius: 50%;
+  
+}
+.updateAvaterForm {
+  margin: 20px auto; 
+}
+.fullName {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.uploadingAlert {
+  margin-top: 11px;
+  font-weight: bold;
+  color: green
+}
+
+.sidebarItem {
+  padding: 20px 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.sidebarItem:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.sidebarItemText {
+  font-weight: 700;
+  font-size: 16px;
+}
+.hr {
+  position: relative;
+  margin-left: -30px;
+  margin-right: -22px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.logoutDiv {
+  /* margin-top: auto; */
+  /* position: relative;
+  top: 100;
+  border: 1px solid #55889a */
+  margin-top: 100px;
+}
+

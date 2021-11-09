@@ -1,0 +1,44 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  width: 74%;
+  padding: 30px 20px;
+  margin: 10px auto;
+  height: 100%
+}
+
+.TodoItemContainer {
+  width: 70%;
+}
+.itemListText {
+  margin-left: 20%;
+  margin-bottom: 9px;
+}
+
+.menuIcon {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  position: fixed;
+  top: 50px;
+  left: 22px;
+  z-index: 40;
+}
+.menuIcon:hover {
+  color: #fff;
+}
+
+@media (max-width: 770px) {
+.root {
+  flex-direction: column;
+  height: auto;
+}
+.TodoItemContainer {
+  width: 100%;
+  margin-top: 50px;
+}
+.itemListText {
+  margin-left: -5px;
+  margin-bottom: 20px;
+}
+}

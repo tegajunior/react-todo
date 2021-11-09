@@ -1,0 +1,18 @@
+.root {
+  background: #fff;
+  border-radius: 20px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.comHeader {
+  font-size: 46px;
+  font-weight: 900;
+}
+.comText {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}

@@ -1,0 +1,95 @@
+.root {
+  /* border: 2px solid red; */
+}
+.formControl {
+  margin-bottom: 1rem;
+}
+
+.formControl input,
+.formControl label {
+  display: block;
+}
+
+.formControl label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.formControl input,
+.formControl select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.formControl input:focus {
+  outline: none;
+  border-color: #240370;
+  background-color: #e0d4fd;
+}
+.buttonContainer {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  border: none;
+  background-color: #007AFF;
+  color: #fff;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 7rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -3rem;
+}
+.button:hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
+.button:disabled, .button:disabled:hover, .button:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.errorText {
+  color: #b40e0e;
+}
+
+@media (max-width: 820px) {
+  .formControl input,
+.formControl select {
+  width: 15rem;
+}
+.formControl {
+  /* width: 100%; */
+}
+}
+@media (max-width: 770px) {
+  .formControl input,
+.formControl select {
+  width: 100%;
+}
+.root {
+  width: 80vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+}

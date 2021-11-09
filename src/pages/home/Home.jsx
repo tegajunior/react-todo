@@ -9,7 +9,7 @@ import LoginForm from "../../components/forms/LoginForm";
 
 const Home = () => {
   const [currentForm, setCurrentForm] = useState("register");
-  const { isFetching, dispatch } = useContext(AuthContext);
+  const { dispatch } = useContext(AuthContext);
 
   const history = useHistory();
 

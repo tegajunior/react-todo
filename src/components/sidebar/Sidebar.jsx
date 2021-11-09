@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, useContext } from "react";
 import clsx from "clsx";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -11,7 +11,6 @@ import { FiCamera } from "react-icons/fi";
 import { FiPower } from "react-icons/fi";
 import { AuthContext } from "../../context/AuthContext";
 
-// import img from "../../assets/img/me.png";
 
 const Sidebar = (props) => {
   const [showUpdateAvatarForm, setShowUpdateAvatarForm] = useState(false);
@@ -20,7 +19,7 @@ const Sidebar = (props) => {
   const { user, dispatch } = useContext(AuthContext);
 
   const onFileChangeHandler = async (e) => {
-    let newImage = e.target.files[0];
+    let newImage = e.target.files[0]; 
     setUploadingImage(true);
 
     if (newImage) {
@@ -29,7 +28,7 @@ const Sidebar = (props) => {
 
       try {
         let postRes = await axios.post(
-          "http://localhost:1337/api/v1/user/update-avatar",
+          "https://chidi-todo-api.herokuapp.com/api/v1/user/update-avatar",
           data,
           {
             headers: {
@@ -41,7 +40,7 @@ const Sidebar = (props) => {
 
         if (postRes.data.success) {
           toast.success(postRes.data.msg);
-          
+
           setUploadingImage(false);
           
           const updatedUser = {

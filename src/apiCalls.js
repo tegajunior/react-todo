@@ -6,7 +6,7 @@ export const loginCall = async (userCredentials, dispatch, history) => {
 
   try {
     let res = await axios.post(
-      "http://localhost:1337/api/v1/auth/login",
+      "https://chidi-todo-api.herokuapp.com/api/v1/auth/login",
       userCredentials
     );
     if (res.data.success) toast.success(res.data.msg);
@@ -22,7 +22,7 @@ export const loginCall = async (userCredentials, dispatch, history) => {
 export const registerCall = async (userData, forceLogin) => {
  try {
   let res = await axios.post(
-    "http://localhost:1337/api/v1/auth/register",
+    "https://chidi-todo-api.herokuapp.com/api/v1/auth/register",
     userData
   );
   if (res.data.success) toast.success(res.data.msg);

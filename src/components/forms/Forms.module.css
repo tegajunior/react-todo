@@ -1,6 +1,4 @@
-.root {
-  /* border: 2px solid red; */
-}
+
 .formControl {
   margin-bottom: 1rem;
 }
@@ -76,9 +74,6 @@
   .formControl input,
 .formControl select {
   width: 15rem;
-}
-.formControl {
-  /* width: 100%; */
 }
 }
 @media (max-width: 770px) {

@@ -15,7 +15,6 @@ import classes from "./Dashboard.module.css";
 const Dashboard = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [todos, setTodos] = useState([]);
-  const [loadingTodos, setLoadingTodos] = useState(true);
   const [todoArrayChange, setTodoArrayChange] = useState(false);
 
   const { user } = useContext(AuthContext);
@@ -32,12 +31,16 @@ const Dashboard = () => {
   };
   const onAddTodoFormSubmittedHandler = async (data) => {
     try {
-      let res = await axios.post("http://localhost:1337/api/v1/todo", data, {
-        headers: {
-          "content-type": "application/json",
-          "access-token": user.token,
-        },
-      });
+      let res = await axios.post(
+        "https://chidi-todo-api.herokuapp.com/api/v1/todo",
+        data,
+        {
+          headers: {
+            "content-type": "application/json",
+            "access-token": user.token,
+          },
+        }
+      );
       if (res.data.success) {
         toast.success(res.data.msg);
       }
@@ -49,13 +52,14 @@ const Dashboard = () => {
   const onDeleteTodoItemHandler = async (id) => {
     console.log(id)
     try {
-      let res = await axios.delete(`http://localhost:1337/api/v1/todo/${id}`,
-      {
-        headers: {
-          "content-type": "application/json",
-          "access-token": user.token
+      let res = await axios.delete(
+        `https://chidi-todo-api.herokuapp.com/api/v1/todo/${id}`,
+        {
+          headers: {
+            "content-type": "application/json",
+            "access-token": user.token,
+          },
         }
-      }
       );
       if (res.data.success) {
         toast.success(res.data.msg);
@@ -67,12 +71,15 @@ const Dashboard = () => {
   }
   const fetchAllTodo = useCallback(async () => {
     try {
-      let res = await axios.get("http://localhost:1337/api/v1/todo", {
-        headers: {
-          "content-type": "application/json",
-          "access-token": user.token,
-        },
-      });
+      let res = await axios.get(
+        "https://chidi-todo-api.herokuapp.com/api/v1/todo",
+        {
+          headers: {
+            "content-type": "application/json",
+            "access-token": user.token,
+          },
+        }
+      );
 
       if (res.data.success) {
         toast.success(res.data.msg);

@@ -9,7 +9,7 @@ const RegisterForm = (props) => {
     isValid: enteredFullNameIsValid,
     valueChangeHandler: fullNameChangeHandler,
     inputBlurHandler: fullNameBlurHandler,
-    reset: resetFullNameInput,
+    
   } = useInput((value) => value.trim().length >= 3);
 
   const {
@@ -18,7 +18,6 @@ const RegisterForm = (props) => {
     isValid: enteredEmailIsValid,
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
-    reset: resetEmailInput,
   } = useInput(
     (value) => value.trim().includes("@") && value.trim().length >= 5
   );
@@ -61,9 +60,7 @@ const RegisterForm = (props) => {
       password: enteredPassword
     };
     props.onSubmitRegisterForm(payload);
-
-    // resetFullNameInput();
-    // resetEmailInput();
+    
     resetPasswordInput();
     resetConfirmPasswordInput();
   };

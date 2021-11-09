@@ -1,8 +1,6 @@
 import React from "react";
 import classes from "./TodoListBanner.module.css";
 
-import Sidebar from '../sidebar/Sidebar';
-
 const TodoListBanner = () => {
   return (
     <div>

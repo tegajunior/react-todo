@@ -82,7 +82,7 @@ const Dashboard = () => {
       );
 
       if (res.data.success) {
-        toast.success(res.data.msg);
+        
         setTodos(res.data.allTodos);
       }
     } catch (err) {
